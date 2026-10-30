@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>12.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>Jangseoru.Core</AssemblyName>
+    <Version>1.1.0</Version>
+    <RootNamespace>Jangseoru.Core</RootNamespace>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Jangseoru.Core.Tests" />
+    <EmbeddedResource Include="Data/picture_keys.txt" />
+    <EmbeddedResource Include="Data/media_keys.txt" />
+    <!-- The 인연 list is not part of the repository; without it the catalog is empty. -->
+    <EmbeddedResource Include="Data/inyeon.tsv" Condition="Exists('Data/inyeon.tsv')" />
+  </ItemGroup>
+
+</Project>

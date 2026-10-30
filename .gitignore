@@ -1,0 +1,20 @@
+bin/
+obj/
+libs/
+dist/
+.vs/
+*.user
+
+.superpowers/brainstorm/
+
+# Not published: build output, game-derived data and pictures, development notes
+dist/
+release/
+docs/
+*.zip
+*.mp4
+src/Jangseoru.Plugin/Resources/*.png
+!src/Jangseoru.Plugin/Resources/fix_pic_paper_002.png
+!src/Jangseoru.Plugin/Resources/fix_pic_paper_003.png
+src/Jangseoru.Core/Data/inyeon.tsv
+tools/build-inyeon-catalog.py

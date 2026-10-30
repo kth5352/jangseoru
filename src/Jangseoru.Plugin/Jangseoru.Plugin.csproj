@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>12.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>Jangseoru.Plugin</AssemblyName>
+    <Version>1.1.0</Version>
+    <RootNamespace>Jangseoru.Plugin</RootNamespace>
+    <!-- Read-only reference location for the game's managed assemblies. Nothing is copied from or written to it. -->
+    <GameDir Condition="'$(GameDir)' == ''">$(MSBuildThisFileDirectory)..\..\..\LegendOfMortal</GameDir>
+    <ManagedDir>$(GameDir)\Mortal_Data\Managed</ManagedDir>
+    <LibsDir>$(MSBuildThisFileDirectory)..\..\libs</LibsDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+    <ProjectReference Include="..\Jangseoru.Core\Jangseoru.Core.csproj" />
+  </ItemGroup>
+
+  <!-- Game assemblies: compile-time references only, never distributed. -->
+  <ItemGroup>
+    <Reference Include="Mortal.Core"><HintPath>$(ManagedDir)\Mortal.Core.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Mortal.Story"><HintPath>$(ManagedDir)\Mortal.Story.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Assembly-CSharp"><HintPath>$(ManagedDir)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(ManagedDir)\UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(ManagedDir)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <!-- Unity UI for the Jangseoru library tab (Unity's own UI library, not game code). -->
+    <Reference Include="UnityEngine.VideoModule"><HintPath>$(ManagedDir)\UnityEngine.VideoModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UI"><HintPath>$(ManagedDir)\UnityEngine.UI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UIModule"><HintPath>$(ManagedDir)\UnityEngine.UIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(ManagedDir)\UnityEngine.TextRenderingModule.dll</HintPath><Private>false</Private></Reference>
+    <!-- Esc/Enter close of the 맹세 detail (legacy Input, as verified by probe P3). -->
+    <Reference Include="UnityEngine.InputLegacyModule"><HintPath>$(ManagedDir)\UnityEngine.InputLegacyModule.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+  <!-- Pictures in Resources/ are embedded when present and decoded at runtime. The repository ships only the two paper frames;
+       any other picture is optional, and the plugin draws a plain stand-in for a missing one. -->
+  <ItemGroup>
+    <EmbeddedResource Include="Resources/*.png" LogicalName="Jangseoru.%(Filename).png" />
+    <Reference Include="UnityEngine.ImageConversionModule"><HintPath>$(ManagedDir)\UnityEngine.ImageConversionModule.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+  <!-- BepInEx / HarmonyX: extracted from mod.zip by tools/fetch-refs.ps1 into libs/ (git-ignored). -->
+  <ItemGroup>
+    <Reference Include="BepInEx.Unity.Mono"><HintPath>$(LibsDir)\BepInEx.Unity.Mono.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="BepInEx.Core"><HintPath>$(LibsDir)\BepInEx.Core.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(LibsDir)\0Harmony.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+</Project>
