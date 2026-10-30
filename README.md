@@ -41,13 +41,13 @@
 
 ### 截圖
 
-| 因緣 | 道具 | 風光・大事件・幻影 |
-|---|---|---|
-| ![因緣](assets/screenshots/zh-TW/01-inyeon.png) | ![道具](assets/screenshots/zh-TW/02-items.png) | ![風光](assets/screenshots/zh-TW/03-media.png) |
+<p align="center"><img src="assets/screenshots/zh-TW/01-inyeon.png" alt="因緣：列傳、立繪、人物錄" width="880"><br><sub>因緣：列傳、立繪、人物錄</sub></p>
 
-| 管理視窗 (F11) |
-|---|
-| ![管理視窗](assets/screenshots/zh-TW/04-admin.png) |
+<p align="center"><img src="assets/screenshots/zh-TW/02-items.png" alt="雜物・書籍・寶物" width="880"><br><sub>雜物・書籍・寶物</sub></p>
+
+<p align="center"><img src="assets/screenshots/zh-TW/03-media.png" alt="風光・大事件・幻影" width="880"><br><sub>風光・大事件・幻影</sub></p>
+
+<p align="center"><img src="assets/screenshots/zh-TW/04-admin.png" alt="管理視窗 (F11)" width="880"><br><sub>管理視窗 (F11)</sub></p>
 
 ### 安裝
 
@@ -129,13 +129,13 @@ powershell -NoProfile -File tools/package.ps1         # dist/Jangseoru/：只有
 
 ### 스크린샷
 
-| 인연 | 아이템 | 풍광·대사건·환영 |
-|---|---|---|
-| ![인연](assets/screenshots/ko/01-inyeon.png) | ![아이템](assets/screenshots/ko/02-items.png) | ![풍광](assets/screenshots/ko/03-media.png) |
+<p align="center"><img src="assets/screenshots/ko/01-inyeon.png" alt="인연: 열전, 그림, 인물록" width="880"><br><sub>인연: 열전, 그림, 인물록</sub></p>
 
-| 관리 창 (F11) |
-|---|
-| ![관리 창](assets/screenshots/ko/04-admin.png) |
+<p align="center"><img src="assets/screenshots/ko/02-items.png" alt="잡물·서적·보물" width="880"><br><sub>잡물·서적·보물</sub></p>
+
+<p align="center"><img src="assets/screenshots/ko/03-media.png" alt="풍광·대사건·환영" width="880"><br><sub>풍광·대사건·환영</sub></p>
+
+<p align="center"><img src="assets/screenshots/ko/04-admin.png" alt="관리 창 (F11)" width="880"><br><sub>관리 창 (F11)</sub></p>
 
 ### 설치
 
